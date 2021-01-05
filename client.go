@@ -1035,3 +1035,7 @@ func (c *Client) logStderr(r io.Reader) {
 		}
 	}
 }
+
+func (c *Client) GetChildPid() int {
+	return c.process.Pid
+}
