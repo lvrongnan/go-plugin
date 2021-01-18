@@ -1,18 +1,14 @@
 module github.com/lvrongnan/go-plugin
 
-go 1.13
+go 1.12
 
 require (
-	github.com/golang/protobuf v1.3.4
-	github.com/hashicorp/go-hclog v0.14.1
-	github.com/hashicorp/yamux v0.0.0-20180604194846-3520598351bb
-	github.com/jhump/protoreflect v1.6.0
-	github.com/mitchellh/go-testing-interface v0.0.0-20171004221916-a61a99592b77
-	github.com/oklog/run v1.0.0
-	github.com/stretchr/testify v1.3.0 // indirect
-	golang.org/x/lint v0.0.0-20190313153728-d0100b6bd8b3 // indirect
-	golang.org/x/net v0.0.0-20190311183353-d8887717615a
-	golang.org/x/tools v0.0.0-20190524140312-2c0ae7006135 // indirect
+	github.com/golang/protobuf v1.4.3
+	github.com/hashicorp/go-hclog v0.15.0
+	github.com/hashicorp/go-plugin v1.4.0
+	github.com/hashicorp/yamux v0.0.0-20200609203250-aecfd211c9ce
+	github.com/jhump/protoreflect v1.8.1
+	github.com/mitchellh/go-testing-interface v1.14.1
+	github.com/oklog/run v1.1.0
 	google.golang.org/grpc v1.27.1
-	honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc // indirect
 )

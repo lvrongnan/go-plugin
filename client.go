@@ -360,10 +360,10 @@ func (c *Client) Client() (ClientProtocol, error) {
 	switch c.protocol {
 	case ProtocolNetRPC:
 		c.client, err = newRPCClient(c)
-
 	case ProtocolGRPC:
 		c.client, err = newGRPCClient(c.doneCtx, c)
-
+	case ProtocolInvalid:
+		c.client, err = newNORPCClient(c)
 	default:
 		return nil, fmt.Errorf("unknown server protocol: %s", c.protocol)
 	}
@@ -684,10 +684,8 @@ func (c *Client) Start() (addr net.Addr, err error) {
 		line = strings.TrimSpace(line)
 		parts := strings.SplitN(line, "|", 6)
 		if len(parts) < 4 {
-			err = fmt.Errorf(
-				"Unrecognized remote plugin message: %s\n\n"+
-					"This usually means that the plugin is either invalid or simply\n"+
-					"needs to be recompiled to support the latest protocol.", line)
+			// 针对非接口类plugin，例如java
+			c.protocol = ProtocolInvalid
 			return
 		}
 
