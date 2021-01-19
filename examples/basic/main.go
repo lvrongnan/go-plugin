@@ -7,8 +7,8 @@ import (
 	"os/exec"
 
 	hclog "github.com/hashicorp/go-hclog"
-	"github.com/hashicorp/go-plugin"
-	"github.com/hashicorp/go-plugin/examples/basic/commons"
+	"github.com/lvrongnan/go-plugin"
+	"github.com/lvrongnan/go-plugin/examples/basic/commons"
 )
 
 func main() {

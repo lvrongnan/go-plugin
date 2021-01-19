@@ -7,8 +7,8 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/hashicorp/go-plugin"
-	"github.com/hashicorp/go-plugin/examples/grpc/proto"
+	"github.com/lvrongnan/go-plugin"
+	"github.com/lvrongnan/go-plugin/examples/grpc/proto"
 )
 
 // Handshake is a common handshake that is shared by plugin and host.
